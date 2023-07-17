@@ -1,0 +1,845 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* transition: .5s linear; */
+}
+
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+/* -----container for personal info page--- */
+
+.container {
+    padding-block: 4%;
+    padding-left: 5%;
+    padding-right: 10%;
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.desktop-pic {
+    position: absolute;
+    height: 85%;
+}
+
+.container .left {
+    width: 30%;
+    padding: 1% 2%;
+    z-index: 2;
+}
+
+.container .left .step {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.container .left .step .one {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    border: .1rem solid white;
+    background: none;
+    text-align: center;
+    line-height: 5rem;
+    margin-block: 2rem;
+    font-size: 1.4rem;
+    color: white;
+    cursor: pointer;
+}
+
+.container .left .step .one.active {
+    background: hsl(228, 100%, 84%);
+    border: none;
+    font-weight: 600;
+    color: hsl(213, 96%, 18%);
+}
+
+.container .left .step .one.active {
+    background: hsl(206, 94%, 87%);
+    color: black;
+}
+
+.container .left .step .h-title .phase {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: hsl(231, 11%, 63%);
+}
+
+.container .left .step .h-title .p-name {
+    margin-top: .5rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* ---right-side for personal-info page-- */
+.container .right {
+    margin-top: 1rem;
+    width: 60%;
+    position: relative;
+}
+
+.container .right h1 {
+    margin-top: 2rem;
+    font-size: 4rem;
+    color: hsl(213, 96%, 18%);
+}
+
+.container .right .title-insight {
+    font-size: 1.8rem;
+    margin-block: 1.5rem;
+    color: hsl(231, 11%, 63%);
+}
+
+.container .right .input-container {
+    width: 66rem;
+    margin-top: 4rem;
+    position: relative;
+}
+
+.container .right .input-container .input-fields {
+    margin-block: 2.5rem;
+}
+
+.container .right .input-container .input-fields .sub-title {
+    margin-bottom: .5rem;
+    font-size: 1.8rem;
+    color: hsl(213, 96%, 18%);
+    font-weight: 500;
+}
+
+.container .right .input-container .input-fields input {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: .1rem solid hsl(229, 24%, 87%);
+}
+
+.container .right .input-fields input:focus{
+    outline: .1rem solid hsl(243, 100%, 62%);
+    cursor: pointer;
+}
+
+
+.mobile-pic {
+    display: none;
+}
+
+.container .right .navs a {
+    text-decoration: none;
+    color: hsl(229, 24%, 70%);
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+
+.container .right .navs.first .btn {
+    position: absolute;
+    right: 0;
+    transform: translateY(149%);
+}
+
+.container .right .navs.first a.absent{
+    display: none;
+}
+
+.container .right .navs a:hover{
+    color: hsl(213, 96%, 18%);
+    font-weight: 600;
+}
+
+.container .right .navs span {
+    padding: 1rem 2rem;
+    background: hsl(213, 96%, 18%);
+    color: white;
+    border: none;
+    border-radius: .3rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.container .right .navs {
+    width: 66rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: -69%;
+    /* background: green; */
+}
+
+.sub-title-pack{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.sub-title-pack .error-message{
+    font-size: 1.4rem;
+    color:  hsl(354, 84%, 57%);
+}
+
+.sub-title-pack .error-message.notactive{
+    display: none;
+}
+
+/* media query for max-width of 1300px for personal-info*/
+@media(max-width:1300px) {
+
+    .container {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+
+    .container .right {
+        width: 45%;
+    }
+
+    .container .right .input-container {
+        width: 100%;
+    }    
+
+
+}
+
+
+/* media query for max-width of 900px for personal-info*/
+@media(max-width:900px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        background: hsl(217, 100%, 97%);
+    }
+
+    .desktop-pic {
+        display: none;
+    }
+
+    .mobile-pic {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: block;
+        /* z-index: -1; */
+    }
+
+    .container .left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        object-fit: cover;
+    }
+
+    .container .left .step .one {
+        cursor: pointer;
+    }
+
+    .container .left .step .h-title {
+        display: none;
+    }
+
+    .container .left .step .one {
+        height: 4rem;
+        width: 4rem;
+        line-height: 4rem;
+        margin-block: 1rem;
+        font-size: 1.2rem;
+        color: white;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+
+    /* --right-side-- */
+
+    .container .right {
+        margin-top: 0rem;
+        width: 90%;
+        position: absolute;
+        background: white;
+        border-radius: 1.4rem;
+        top: 14%;
+        padding: 1rem 2.5rem 2rem;
+        z-index: 1;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    .container .right .title-insight {
+        margin-block: 1rem;
+        width: 70%;
+    }
+
+    .container .right .input-container {
+        margin-top: 2rem;
+    }
+
+    .container .right .input-container .navs a {
+        position: absolute;
+        left: -2rem;
+    }
+
+    .container .right .input-container .navs.first .btn {
+       right: -2rem;
+       bottom: -23rem;
+    }
+
+    .container .right .input-container .navs{
+        bottom: -26%;
+    }
+}
+
+
+
+
+/* ---plan page--- */
+
+/* right-side */
+.container .right .cards{
+    position: relative;
+}
+
+.container .right .card-container {
+    width: 100%;
+    margin-top: 4rem;
+    display: flex;
+    gap: 3rem;
+    /* justify-content: space-between; */
+}
+
+.container .right .cards .card {
+    width: 20rem;
+    /* height: 22rem; */
+    border: .1rem solid hsl(229, 24%, 87%);
+    padding: 1.5rem;
+    border-radius: .8rem;
+    /* overflow: hidden; */
+}
+
+.container .right .cards .card.active{
+    border: .1rem solid  hsl(243, 100%, 62%);
+}
+
+.container .right .cards .card:hover{
+    border: .1rem solid  hsl(243, 100%, 62%);
+    cursor: pointer;
+}
+
+
+
+.container .right .cards .card .ps {
+    margin-top: 11rem;
+}
+
+.container .right .cards .card .ps .sub-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: hsl(213, 96%, 18%);
+
+}
+
+.container .right .cards .card .ps .costPerYear {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: hsl(229, 24%, 87%);
+    margin-block: .5rem;
+}
+
+.container .right .cards .card .ps .length-of-free {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: hsl(213, 96%, 18%);
+}
+
+.container .right .duration {
+    margin-top: 4rem;
+    width: 66rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: hsl(229, 24%, 87%);
+    background: hsl(229, 24%, 98%);
+    padding-block: 1.5rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 26px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(213, 96%, 18%);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: hsl(213, 96%, 18%);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px hsl(213, 96%, 18%);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.time.active {
+    color: hsl(213, 96%, 18%);
+}
+
+.container .right .cards .navs{
+    bottom: -54%;
+}
+
+
+
+
+
+/* media query for 1300px plan page */
+@media(max-width:1300px) {
+
+    .container .right {
+        width: 56%;
+    }
+
+    .container .right .cards {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .container .right .navs {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .container .right .duration {
+        width: 100%;
+    }
+
+}
+
+
+/* media query for 900px pan page */
+@media(max-width:900px) {
+
+    .container .right {
+        width: 90%;
+    }
+
+    .container .right .cards .card-container {
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .container .right .cards div .duration {
+        margin-top: 3rem;
+    }
+
+    .container .right .cards .card-container .card {
+        width: 100%;
+        height: 10rem;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: 0;
+    }
+    .container .right .cards .card .ps {
+        margin-top: 0rem;    
+    }
+
+    .container .right .cards .navs{
+        position: relative;
+        bottom: -16rem; 
+    }
+
+    .container .right .cards .navs a{
+        position: absolute;
+        left: -2rem;
+    }
+
+    .container .right .cards .navs .btn{
+        position: absolute;
+        right: -2rem;
+    }
+
+}
+
+
+
+
+
+/* ----adds on page--- */
+.container .right .selctions-container{
+    position: relative;
+}
+
+
+.right .selections {
+    margin-top: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 66rem;
+    position: relative;
+}
+
+.right .selections .select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+    border: .1rem solid hsl(229, 24%, 87%);
+    border-radius: .8rem;
+}
+
+.right .selections .select.active {
+    border: .1rem solid hsl(243, 100%, 62%);
+    background: hsl(231, 100%, 99%);
+}
+
+
+.right .selections .select:hover{
+    border: .1rem solid  hsl(243, 100%, 62%);
+    cursor: pointer;
+}
+
+
+.right .selections .select .checker {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.right .selections .select .ps .sub-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: hsl(213, 96%, 18%);
+}
+
+.right .selections .select .ps .costPerYear {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: hsl(229, 24%, 87%);
+    margin-block: .5rem;
+}
+
+.right .selections .select .length-of-free {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: hsl(243, 100%, 62%);
+}
+
+
+.right .selections .navs.addons {
+    width: 66rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: -73%;
+}
+
+/* .container .right .navs a {
+    text-decoration: none;
+    color: hsl(229, 24%, 70%);
+    font-size: 1.8rem;
+    text-transform: capitalize;
+}
+
+.container .right .navs span {
+    padding: 1rem 2rem;
+    background: hsl(213, 96%, 18%);
+    color: white;
+    border: none;
+    border-radius: .3rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    font-weight: 600;
+} */
+
+
+/* ---media query 1300px for adds on page-- */
+@media(max-width:1300px) {
+
+    .container .right .selctions-container .selections {
+        width: 100%;
+    }
+
+    .right .selections .selctions-container .navs.addons{
+        width: 100%;
+    }
+
+}
+
+/* media query 900px for adds on page */
+@media(max-width:900px) {
+
+    .right .selctions-container .navs.addons{
+        position: relative;
+        bottom: -27rem; 
+    }
+
+    .right .selctions-container .navs a{
+        position: absolute;
+        left: -2rem;
+    }
+
+    .right .selctions-container .navs .btn{
+        position: absolute;
+        right: -2rem;
+    }
+
+}
+
+
+
+
+
+/* ----finishup page--- */
+.container .right .summary-container{
+    /* position: relative; */
+}
+
+.right .total-summary {
+    margin-top: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 66rem;
+    background: hsl(231, 100%, 99%);
+    border-radius: .8rem;
+    padding: 2rem;
+    position: relative;
+}
+
+.right .total-summary .select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right .total-summary .select.first-child {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    border-bottom: .1rem solid hsl(229, 24%, 87%);
+}
+
+.right .total-summary .first-child .ps .costPerYear:hover{
+    color: hsl(243, 100%, 62%);
+} 
+
+.total-summary .select .ps .sub-title {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: hsl(231, 11%, 63%);
+}
+
+.total-summary .select .ps .sub-title.main {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: hsl(213, 96%, 18%);
+}
+
+.total-summary .select .ps .costPerYear {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: hsl(231, 11%, 63%);
+    margin-block: .5rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.right .total-summary .select .length-of-free.main{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: hsl(213, 96%, 18%);
+}
+
+.right .total-summary .select .length-of-free {
+    font-size: 1.6rem;
+    color: black;
+}
+
+.right .select.last-child {
+    width: 66rem;
+    padding-block: 3rem;
+    padding-inline: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right .select.last-child .ps .sub-title{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: hsl(231, 11%, 63%);
+}
+
+.right .select.last-child .length-of-free{
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: hsl(243, 100%, 62%);
+}
+
+.container .right .summary-container .navs.addons.finishup{
+    bottom: 0%;
+}
+
+
+.navs.addons.finishup .btn{
+    background: hsl(243, 100%, 62%);
+}
+
+.navs.addons.finishup .btn:hover{
+    opacity: .8;
+}
+
+
+
+@media(max-width:1300px) {
+
+    .container .right .total-summary {
+        width: 100%;
+    }
+
+    .right .total-summary .navs.addons.finishup {
+        width: 100%;
+    }
+
+    .right .select.last-child {
+        width: 100%;
+    }
+
+    .container .right .summary-container .navs.addons.finishup{
+        bottom: 5%;
+    }
+
+}
+
+@media(max-width:900px){
+    .container .right .summary-container .navs.addons.finishup {
+        position: relative;  
+        bottom: -35rem; 
+    }
+
+    .container .right .summary-container .navs.addons.finishup a{
+        position: absolute;
+        left: -2rem;
+    }
+
+    .container .right .summary-container .navs.addons.finishup .btn{
+        position: absolute;
+        right: -2rem;
+    }
+
+}
+
+
+
+
+
+/* ---thank-you page */
+
+.right.thank-you{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    width: 30%;
+}
+
+@media(max-width:1300px) {
+
+    .right.thank-you{
+        width: 40%;
+    }
+}
+
+@media(max-width:900px) {
+
+    .right.thank-you{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        width: 90%;
+        left: 0;
+        right: 0;
+        transform:none;
+        position: absolute;
+        top: 14%;
+        margin-inline: auto;
+    }
+
+    .right.thank-you .title-insight{
+        margin-inline: auto;
+    }
+
+}

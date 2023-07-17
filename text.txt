@@ -1,0 +1,81 @@
+<!-- Sidebar start -->
+
+
+
+
+
+
+
+ 
+
+
+ 
+
+
+
+  <!-- Step 1 start -->
+
+
+
+
+  
+
+  
+ 
+
+  
+  
+
+  <!-- Step 2 start -->
+
+  $90/yr
+  $120/yr
+  $150/y
+
+ 
+  
+
+ 
+  
+
+  
+
+  
+  
+
+
+  
+  
+
+  
+ 
+
+  Go Back
+  Next Step
+
+  <!-- Step 3 end -->
+
+  <!-- Step 4 start -->
+
+ 
+
+  <!-- Dynamically add subscription and add-on selections here -->
+
+  Total (per month/year)
+
+  Go Back
+  Confirm
+
+  <!-- Step 4 end -->
+
+  <!-- Step 5 start -->
+
+  
+
+  
+  <!-- Step 5 end -->
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>

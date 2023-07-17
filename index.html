@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Multi-step form</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="./assets/images/bg-sidebar-mobile.svg"
+        class="mobile-pic"
+        alt=""
+      />
+      <img
+        src="./assets/images/bg-sidebar-desktop.svg"
+        class="desktop-pic"
+        alt=""
+      />
+      <div class="left">
+        <div class="step">
+          <p class="one active">1</p>
+          <div class="h-title">
+            <p class="phase">Step 1</p>
+            <p class="p-name">Your info</p>
+          </div>
+        </div>
+        <div class="step">
+          <p class="one">2</p>
+          <div class="h-title">
+            <p class="phase">Step 2</p>
+            <p class="p-name">Select plan</p>
+          </div>
+        </div>
+        <div class="step">
+          <p class="one">3</p>
+          <div class="h-title">
+            <p class="phase">Step 3</p>
+            <p class="p-name">Add-ons</p>
+          </div>
+        </div>
+        <div class="step">
+          <p class="one">4</p>
+          <div class="h-title">
+            <p class="phase">Step 4</p>
+            <p class="p-name">Summary</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="title-container">
+          <h1 class="title">Personal info</h1>
+          <p class="title-insight">
+            Please provide your name, email address, and phone number.
+          </p>
+        </div>
+        <form onsubmit="return false" class="input-container" id="edited-content">
+          <div id="dynamic-content">
+            <div class="inputs">
+              <div class="input-fields">
+                <div class="sub-title-pack">
+                  <p class="sub-title">Name</p>
+                  <p class="error-message notactive">This field is required</p>
+                </div>
+                <input
+                  type="text"
+                  placeholder="e.g. Stephen King"
+                  value=""
+                  class="name"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="input-fields">
+                <div class="sub-title-pack">
+                <p class="sub-title">Email Address</p>
+                <p class="error-message notactive">This field is required</p>
+              </div>
+                <input
+                  type="email"
+                  placeholder=" e.g. stephenking@lorem.com"
+                  value=""
+                  class="email"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="input-fields">
+                <div class="sub-title-pack">
+                <p class="sub-title">Phone Number</p>
+                <p class="error-message notactive">This field is required</p>
+              </div>
+                <input
+                  type="text"
+                  placeholder="e.g. +1 234 567 890"
+                  value=""
+                  class="number"
+                  autocomplete="off"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="navs first">
+            <a class="absent">Go back</a>
+            <span class="btn" id="nextBtn">Next Step</span>
+          </div>
+        </form onsubmit="return false">
+      </div>
+    </div>
+  </body>
+</html>
